@@ -1,0 +1,536 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap');
+
+.food-munch-logo {
+    width: 70px;
+    height: 60px;
+    border-radius: 5px;
+
+}
+
+
+
+
+#navItem1 {
+    color: #F3C623;
+    font-family: "Roboto";
+    margin: 3px;
+}
+
+
+#navItem2 {
+    color: #F3C623;
+    font-family: "Roboto";
+    margin: 3px;
+}
+
+#navItem3 {
+    color: #F3C623;
+    ;
+    font-family: "Roboto";
+    margin: 3px;
+}
+
+#navItem4 {
+    color: #F3C623;
+    ;
+    font-family: "Roboto";
+    margin: 3px;
+}
+
+.bg-black-navbar {
+    background-color: #000000;
+}
+
+.banner-section-bg-container {
+    height: 100vh;
+    background-size: cover;
+}
+
+.banner-heading {
+    color: white;
+    font-family: "Georgia";
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.banner-caption {
+    color: #f5f7fa;
+    font-family: "Cedarville Cursive";
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+span {
+    background-color: #F3C623;
+}
+
+.custom-button {
+    color: white;
+    background-color: #d0b200;
+    width: 130px;
+    height: 45px;
+    border-width: 0;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.custom-button-in-md {
+    color: white;
+    background-color: #d0b200;
+    width: 130px;
+    height: 45px;
+    border-width: 0;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-top: 40px;
+}
+
+.custom-outline-button {
+    color: #ffffff;
+    background-color: transparent;
+    width: 130px;
+    height: 45px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d0b200;
+    border-radius: 8px;
+}
+
+.follow-us-section {
+    background-color: white;
+}
+
+.follow-us-section-heading {
+    text-align: center;
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.follow-us-icon-container {
+    background-color: #faf7e8;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 15px;
+    padding: 22px 16px 14px 22px;
+}
+
+.icon {
+    color: #d0b200;
+    font-size: 35px;
+
+}
+
+
+.middle-section {
+    background-color: #000000;
+    /* height: 70vh; */
+}
+
+.culinary {
+    font-family: 'Dancing Script', cursive;
+    color: #F3C623;
+}
+
+.culinary-description {
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(to right, #84CC16, #FACC15);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /*   font-family: 'Nunito', sans-serif; */
+    font-weight: 900;
+    font-size: 28px;
+    padding: 5px;
+    text-align: center;
+}
+
+.india-taste-btn {
+    height: 45px;
+    width: 300px;
+    background-color: transparent;
+    /* Transparent background by default */
+    color: white;
+    /* Gold text */
+    border: 2px solid #F3C623;
+    /* Gold border */
+    border-radius: 8px;
+    padding: 10px 23px;
+    /* Slightly less padding to account for border */
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Smooth transition for all properties */
+
+}
+
+.india-taste-btn:hover {
+    background-color: #F3C623;
+    /* Solid gold background on hover */
+    color: white;
+    /* Black text on hover for contrast */
+    transform: translateY(-2px);
+}
+
+.indian-food {
+    padding: 30px;
+}
+
+.indian-food-img {
+    height: 300px;
+    width: 300px;
+    border-radius: 15px;
+
+}
+
+
+.special-mixes-btn {
+    height: 45px;
+    width: 300px;
+    background-color: transparent;
+    /* Transparent background by default */
+    color: white;
+    /* Gold text */
+    border: 2px solid #F3C623;
+    /* Gold border */
+    border-radius: 8px;
+    padding: 10px 23px;
+    /* Slightly less padding to account for border */
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Smooth transition for all properties */
+
+}
+
+.special-mixes-btn:hover {
+    background-color: #F3C623;
+    /* Solid gold background on hover */
+    color: white;
+    /* Black text on hover for contrast */
+    transform: translateY(-2px);
+}
+
+.special-mixes {
+    padding: 30px;
+}
+
+.special-mixes-img {
+    height: 300px;
+    width: 300px;
+    border-radius: 15px;
+
+}
+
+.refreshments-btn {
+    height: 45px;
+    width: 300px;
+    background-color: transparent;
+    /* Transparent background by default */
+    color: white;
+    /* Gold text */
+    border: 2px solid #F3C623;
+    /* Gold border */
+    border-radius: 8px;
+    padding: 10px 23px;
+    /* Slightly less padding to account for border */
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Smooth transition for all properties */
+
+}
+
+.refreshments-btn:hover {
+    background-color: #F3C623;
+    /* Solid gold background on hover */
+    color: white;
+    /* Black text on hover for contrast */
+    transform: translateY(-2px);
+}
+
+.refreshments {
+    padding: 30px;
+}
+
+.refreshments-img {
+    height: 300px;
+    width: 300px;
+    border-radius: 15px;
+
+}
+
+.banner-one {
+    background-image: url('https://res.cloudinary.com/dqzxjqirp/image/upload/v1757567438/unnamed_r5t6xu.png');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .banner-one {
+        background-image: url('https://res.cloudinary.com/dqzxjqirp/image/upload/v1757565550/unnamed_d5heoo.png');
+        background-size: cover;
+        background-position: center;
+        height: 35vh;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.footer-section {
+    background-color: #000000;
+
+}
+
+
+.food-munch-logo {
+    width: 70px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.footer-heading {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    padding-top: 32px;
+}
+
+.footer-section-mail-id {
+    color: #F3C623;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer-section-address {
+    color: #c0c0c0;
+    /* A slightly softer color than pure gold for better readability */
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+/* Styling for the new links */
+.footer-link {
+    color: #c0c0c0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #F3C623;
+    /* Gold color on hover */
+}
+
+/* Styling for the divider line */
+.footer-divider {
+    border-color: #444444;
+}
+
+/* This is a Bootstrap helper, but good to have */
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.main-container-india {
+    background-color: #000000;
+    color: #F3C623;
+}
+
+.home-design {
+    color: #F3C623;
+    padding: 20px;
+    font-size: 22px;
+    font-family: "Bitcount Grid Double", system-ui;
+}
+
+.home-design:hover {
+    text-decoration: underline;
+    text-decoration-color: #000000;
+}
+
+.recipe-name {
+    color: #F3C623;
+    padding: 20px;
+    font-family: "Bitcount Grid Double", system-ui;
+}
+
+.cooking-instructions {
+    font-family: "Tagesschrift", system-ui;
+}
+
+li {
+    font-family: "Tagesschrift", system-ui;
+
+}
+
+.step-bg {
+    background-color: #000000;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main-recipe-large {
+    background-color: #000000;
+    background-size: cover;
+}
+
+
+.collection-main {
+    background-color: #000000;
+    background-size: cover;
+}
+
+.collection-india-heading {
+    color: #F3C623;
+    font-family: "Fredericka the Great", serif;
+    text-align: center;
+    padding: 15px;
+}
+
+.img-dish-size {
+    height: 250px;
+    width: 300px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: pointer;
+}
+
+.each-dish {
+    background-color: #F3C623;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.dish-name-btn {
+    background-color: #F3C623;
+    border-radius: 5px;
+    border-width: 0px;
+    padding: 8px;
+    font-family: "Rokkitt", serif;
+    font-size: 18px;
+}
+
+.back-btn {
+    background-color: #000000;
+    color: #F3C623;
+    border-width: 0px;
+    padding: 20px;
+    font-family: "Rokkitt", serif;
+    /*   border-color: #F3C623; */
+}
+
+h3 {
+    cursor: pointer;
+}
+
+.about-us-section,
+.follow-us-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about-us-section {
+    background-color: #000000;
+    color: #fff;
+}
+
+.follow-us-section {
+    background-color: #000000;
+    color: #F3C623;
+}
+
+.section-heading {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #F3C623;
+}
+
+
+.section-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    color: #ccc;
+}
+
+.follow-us-section .section-description {
+    color: #333;
+}
+
+.social-icon {
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,2502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Recipes </title>
+
+    <link rel="icon" href="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fac54f0bd8.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="sectionHomePage">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black-navbar fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="https://getrecipes.niat.tech/">
+                    <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active m-auto" id="navItem1" href="#indian-section">Menu </a>
+                        <a class="nav-link m-auto" href="#about" id="navItem3"> About Us </a>
+                        <a class="nav-link m-auto" href="#follow" id="navItem4"> Follow Us </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="banner-section-bg-container d-flex justify-content-center flex-column">
+            <div class="video-container d-none d-lg-block">
+                <video autoplay loop muted playsinline id="background-video">
+                    <source src="https://res.cloudinary.com/dqzxjqirp/video/upload/v1741335526/4fb8c565ce83c6bf0e5ec75508f39fe8_vnnhv0.mp4" type="video/mp4">
+                </video>
+                <div class="overlay"></div>
+                <div class="text-center content">
+                    <h1 class="banner-heading mb-3">Spice Up Your Life with Every Recipe!</h1>
+                    <p class="banner-caption mb-4">Recipes Made Easy</p>
+                    <button class="custom-button">View Menu</button>
+                    <button class="custom-outline-button">Order Now</button>
+                </div>
+            </div>
+            <div class="video-container d-lg-none">
+                <video autoplay loop muted playsinline id="background-video">
+                    <source src="https://res.cloudinary.com/dqzxjqirp/video/upload/v1741351247/558991a17d0f7c28740783aca4d5c53d_t4_u64vod.mp4" type="video/mp4">
+                </video>
+                <div class="overlay"></div>
+                <div class="text-center content">
+                    <h1 class="banner-heading mb-3"> Spice Up Your Life with Every Recipe!</h1>
+                    <p class="banner-caption mb-4">Recipes Made Easy</p>
+                    <button class="custom-button">View Menu</button>
+                    <button class="custom-outline-button">Order Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-section text-center" id="indian-section">
+            <h1 class="culinary p-4"> A Culinary Journey</h1>
+            <div class="d-lg-none d-flex flex-column justify-content-center align-items-center pb-4">
+                <div class="indian-food  d-flex flex-column justify-content-center align-items-center">
+                    <img class="indian-food-img" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757409887/3d2e2e1b85e9a4e2c44e74bdc8a3a446_x62jyq.jpg" />
+                    <button class="india-taste-btn" onclick="display('sectionIndianCollection')">Taste of India</button>
+                </div>
+                <div class="special-mixes  d-flex flex-column justify-content-center align-items-center">
+                    <img class="special-mixes-img" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757497976/unnamed_qd1tjv.png" />
+                    <button class="special-mixes-btn" onclick="display('sectionSpecialMixesCollection')">Special Mixes</button>
+                </div>
+                <div class="refreshments  d-flex flex-column justify-content-center align-items-center">
+                    <img class="refreshments-img" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757500495/unnamed_z9ql0j.png" />
+                    <button class="refreshments-btn" onclick="display('sectionRefreshments')">Liquid Refreshments</button>
+                </div>
+            </div>
+            <div class="d-none d-lg-flex flex-row justify-content-center align-items-center pb-4">
+                <div class="indian-food d-flex flex-column justify-content-center align-items-center">
+                    <img class="indian-food-img" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757409887/3d2e2e1b85e9a4e2c44e74bdc8a3a446_x62jyq.jpg" />
+                    <button class="india-taste-btn" onclick="display('sectionIndianCollection')">Taste of India</button>
+                </div>
+                <div class="special-mixes  d-flex flex-column justify-content-center align-items-center">
+                    <img class="special-mixes-img" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757497976/unnamed_qd1tjv.png" />
+                    <button class="special-mixes-btn" onclick="display('sectionSpecialMixesCollection')">Special Mixes</button>
+                </div>
+                <div class="refreshments  d-flex flex-column justify-content-center align-items-center">
+                    <img class="refreshments-img" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757500495/unnamed_z9ql0j.png" />
+                    <button class="refreshments-btn" onclick="display('sectionRefreshments')">Liquid Refreshments</button>
+                </div>
+
+            </div>
+            <p class="culinary-description pb-4">Cooking is like love. It should be entered into with abandon or not at all.</p>
+            <div class="banners-box">
+                <div class="banner-one"></div>
+            </div>
+        </div>
+        <section id="about" class="about-us-section">
+            <div class="container">
+                <h2 class="section-heading">About Us</h2>
+                <p class="section-description">Get Recipes is your go-to platform for discovering delicious recipes from around the world. We bring you step-by-step cooking guides, video tutorials, and tips to make your culinary journey easier and more enjoyable.</p>
+                <p class="section-description">Our mission is to inspire home cooks and food enthusiasts to explore new flavors, experiment with ingredients, and create memorable meals for family and friends.</p>
+                <p class="section-description">Join us on our journey to make cooking simple, fun, and accessible to everyone!</p>
+            </div>
+        </section>
+        <section id="follow" class="follow-us-section">
+            <div class="container">
+                <h2 class="section-heading">Follow Us</h2>
+                <div class="d-flex justify-content-center">
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionIndianCollection">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black-navbar sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="https://getrecipes.niat.tech/">
+                    <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active m-auto" id="navItem1" href="#indian-section">Menu </a>
+                        <a class="nav-link m-auto" href="#about" id="navItem3"> About Us </a>
+                        <a class="nav-link m-auto" href="#follow" id="navItem4"> Follow Us </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="collection-main">
+            <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+            <h1 class="collection-india-heading">Taste of India</h1>
+            <div class="india-contains   d-lg-none d-flex flex-column justify-content-center align-items-center">
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionHyderabad')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758255329/unnamed_lnhca2.png" />
+
+                    <button class="dish-name-btn" onclick="display('sectionHyderabad')">Hyderabadi Kacche Gosht ki Biryani</button>
+                </div>
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionKarnataka')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758258126/unnamed_mxvnw4.png" />
+
+                    <button class="dish-name-btn" onclick="display('sectionKarnataka')">Karnataka's Bisi Bele Bath</button>
+                </div>
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionKerala')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758258895/unnamed_qynqgo.png" />
+
+                    <button class="dish-name-btn" onclick="display('sectionKerala')">Kerala Appam</button>
+                </div>
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionChennai')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758259222/unnamed_okzj6j.png" />
+
+                    <button class="dish-name-btn" onclick="display('sectionChennai')">Chennai Style Masala Dosa</button>
+                </div>
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionDelhi')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758259898/7f55b38f35f6760ed94f75f7596de747_bpwxoi.jpg" />
+
+                    <button class="dish-name-btn" onclick="display('sectionDelhi')">Delhi's Chole Bhature</button>
+                </div>
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionChettinad')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758260049/aeb8a8b359c017333621eb7b15d47afe_tqifa0.jpg" />
+
+                    <button class="dish-name-btn" onclick="display('sectionChettinad')">Chettinad Chicken Varuval</button>
+                </div>
+            </div>
+            <div class="india-contains d-none d-lg-flex flex-wrap justify-content-center align-items-center gap-4">
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionHyderabad')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758255329/unnamed_lnhca2.png" />
+                    <button class="dish-name-btn" onclick="display('sectionHyderabad')">Hyderabadi Kacche Gosht ki Biryani</button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionKarnataka')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758258126/unnamed_mxvnw4.png" />
+                    <button class="dish-name-btn" onclick="display('sectionKarnataka')">Karnataka's Bisi Bele Bath</button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionKerala')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758258895/unnamed_qynqgo.png" />
+                    <button class="dish-name-btn" onclick="display('sectionKerala')">Kerala Appam</button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionChennai')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758259222/unnamed_okzj6j.png" />
+                    <button class="dish-name-btn" onclick="display('sectionChennai')">Chennai Style Masala Dosa</button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionDelhi')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758259898/7f55b38f35f6760ed94f75f7596de747_bpwxoi.jpg" />
+                    <button class="dish-name-btn" onclick="display('sectionDelhi')">Delhi's Chole Bhature</button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionChettinad')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758260049/aeb8a8b359c017333621eb7b15d47afe_tqifa0.jpg" />
+                    <button class="dish-name-btn" onclick="display('sectionChettinad')">Chettinad Chicken Varuval</button>
+                </div>
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionHyderabad')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758255329/unnamed_lnhca2.png" />
+                    <button class="dish-name-btn" onclick="display('sectionHyderabad')">Hyderabadi Kacche Gosht ki Biryani</button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionKarnataka')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758258126/unnamed_mxvnw4.png" />
+                    <button class="dish-name-btn" onclick="display('sectionKarnataka')">Karnataka's Bisi Bele Bath</button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionKerala')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758258895/unnamed_qynqgo.png" />
+                    <button class="dish-name-btn" onclick="display('sectionKerala')">Kerala Appam</button>
+                </div>
+            </div>
+
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionSpecialMixesCollection">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black-navbar sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="https://getrecipes.niat.tech/">
+                    <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active m-auto" id="navItem1" href="#indian-section">Menu </a>
+                        <a class="nav-link m-auto" href="#" id="navItem3"> About Us </a>
+                        <a class="nav-link m-auto" href="#" id="navItem4"> Follow Us </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="collection-main">
+            <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+            <h1 class="collection-india-heading">Special Mixes</h1>
+
+            <div class="india-contains d-flex flex-column justify-content-center align-items-center gap-4">
+
+                <!-- Indo-Chinese Fusion -->
+                <h1 class="collection-india-heading">Indo-Chinese Fusion</h1>
+                <div class="d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center gap-4">
+                    <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionGobi')">
+                        <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758359272/unnamed_odc0iz.png" />
+                        <button class="dish-name-btn" onclick="display('sectionGobi')">Gobi Manchurian Fried Rice</button>
+                    </div>
+
+                    <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionChilli')">
+                        <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758360944/unnamed_xvfdv1.png" />
+                        <button class="dish-name-btn" onclick="display('sectionChilli')">Chilli Paneer Hakka Noodles</button>
+                    </div>
+
+                    <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionSzechuan')">
+                        <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758360989/unnamed_lwylyc.png" />
+                        <button class="dish-name-btn" onclick="display('sectionSzechuan')">Szechuan Dosa</button>
+                    </div>
+                </div>
+
+                <!-- Indo-Mexican Fusion -->
+                <h1 class="collection-india-heading">Indo-Mexican Fusion</h1>
+                <div class="d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center gap-4">
+                    <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionChicken')">
+                        <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758361060/unnamed_e1fnks.png" />
+                        <button class="dish-name-btn" onclick="display('sectionChicken')">Chicken Tikka Tacos</button>
+                    </div>
+
+                    <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionPaneer')">
+                        <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758361109/unnamed_gr1syw.png" />
+                        <button class="dish-name-btn" onclick="display('sectionPaneer')">Paneer Bhurji Burritos</button>
+                    </div>
+
+                    <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionRajma')">
+                        <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758361193/unnamed_ehfspk.png" />
+                        <button class="dish-name-btn" onclick="display('sectionRajma')">Rajma Masala Nachos</button>
+                    </div>
+                </div>
+
+                <!-- Indo-Italian Fusion -->
+                <h1 class="collection-india-heading">Indo-Italian Fusion</h1>
+                <div class="d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center gap-4">
+                    <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionTandoori')">
+                        <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758361278/unnamed_brbclc.png" />
+                        <button class="dish-name-btn" onclick="display('sectionTandoori')">Tandoori Chicken Malai Pizza</button>
+                    </div>
+
+                    <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionMasala')">
+                        <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758361456/unnamed_juq2ls.png" />
+                        <button class="dish-name-btn" onclick="display('sectionMasala')">Masala Mafia Pasta</button>
+                    </div>
+
+                    <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionGulab')">
+                        <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758361557/unnamed_cnopxc.png" />
+                        <button class="dish-name-btn" onclick="display('sectionGulab')">Gulab Jamun Cheesecake</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionRefreshments">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black-navbar sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="https://getrecipes.niat.tech/">
+                    <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active m-auto" id="navItem1" href="#indian-section">Menu </a>
+                        <a class="nav-link m-auto" href="#" id="navItem3"> About Us </a>
+                        <a class="nav-link m-auto" href="#" id="navItem4"> Follow Us </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="collection-main">
+            <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+            <h1 class="collection-india-heading">Liquid Refreshments</h1>
+            <div class="india-contains d-lg-none d-flex flex-column justify-content-center align-items-center">
+
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionAmritsar')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758363586/unnamed_n2rnbv.png" />
+
+                    <button class="dish-name-btn" onclick="display('sectionAmritsar')">Amritsari Sweet Lassi </button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionMumbai')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758363662/unnamed_olh9ty.png" />
+
+                    <button class="dish-name-btn" onclick="display('sectionMumbai')">Mumbai's Cutting Chai </button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionGoli')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758363761/303272bedbaa17efed2f9ed0b5aa7670_bqgrva.jpg" />
+
+                    <button class="dish-name-btn" onclick="display('sectionGoli')">Goli Soda</button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionJaljeera')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758363815/unnamed_rbmyp3.png" />
+
+                    <button class="dish-name-btn" onclick="display('sectionJaljeera')">Jaljeera</button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionKashmiri')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758364144/54665bb4-ce42-47e2-b925-f4c2791e1278_lbobc6.jpg" />
+
+                    <button class="dish-name-btn" onclick="display('sectionKashmiri')">Kashmiri Tea (Pink Tea) </button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionIrani')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758364506/d2f44e914953834cd4784f8497f8bee6_nbwtxn.jpg" />
+
+                    <button class="dish-name-btn" onclick="display('sectionIrani')">Hyderabad's Irani Chai </button>
+                </div>
+
+
+
+            </div>
+
+
+            <div class="india-contains d-none d-lg-flex flex-wrap justify-content-center align-items-center gap-4">
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionAmritsar')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758363586/unnamed_n2rnbv.png" />
+
+                    <button class="dish-name-btn" onclick="display('sectionAmritsar')">Amritsari Sweet Lassi </button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionMumbai')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758363662/unnamed_olh9ty.png" />
+
+                    <button class="dish-name-btn" onclick="display('sectionMumbai')">Mumbai's Cutting Chai </button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionGoli')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758363761/303272bedbaa17efed2f9ed0b5aa7670_bqgrva.jpg" />
+
+                    <button class="dish-name-btn" onclick="display('sectionGoli')">Goli Soda</button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionJaljeera')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758363815/unnamed_rbmyp3.png" />
+
+                    <button class="dish-name-btn" onclick="display('sectionJaljeera')">Jaljeera</button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionKashmiri')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758364144/54665bb4-ce42-47e2-b925-f4c2791e1278_lbobc6.jpg" />
+
+                    <button class="dish-name-btn" onclick="display('sectionKashmiri')">Kashmiri Tea (Pink Tea) </button>
+                </div>
+
+                <div class="each-dish d-flex flex-column justify-content-center align-items-center" onclick="display('sectionIrani')">
+                    <img class="img-dish-size" src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1758364506/d2f44e914953834cd4784f8497f8bee6_nbwtxn.jpg" />
+
+                    <button class="dish-name-btn" onclick="display('sectionIrani')">Hyderabad's Irani Chai </button>
+                </div>
+
+
+            </div>
+
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionHyderabad">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionIndianCollection')" class="back-btn">Back</button>
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                    <p class="recipe-name">Hyderabadi Kacche Gosht ki Biryani</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ADjdhCpNysY?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Wash and soak basmati rice for 30 minutes, then drain.</li>
+                        <li>Marinate mutton with yogurt, ginger-garlic paste, green chilies, spices, and fried onions for at least 1 hour.</li>
+                        <li>In a heavy-bottomed vessel, spread marinated mutton at the bottom.</li>
+                        <li>Layer soaked rice on top of the mutton.</li>
+                        <li>Add saffron milk, ghee, and fried onions over the rice.</li>
+                        <li>Cover with a tight lid and cook on low flame (dum) for 40–45 minutes.</li>
+                        <li>Switch off the flame, let it rest for 10 minutes before opening.</li>
+                        <li>Gently mix and serve hot with raita or mirchi ka salan.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Hyderabadi Kacche Gosht ki Biryani</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ADjdhCpNysY?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Wash and soak basmati rice for 30 minutes, then drain.</li>
+                                <li>Marinate mutton with yogurt, ginger-garlic paste, green chilies, spices, and fried onions for at least 1 hour.</li>
+                                <li>In a heavy-bottomed vessel, spread marinated mutton at the bottom.</li>
+                                <li>Layer soaked rice on top of the mutton.</li>
+                                <li>Add saffron milk, ghee, and fried onions over the rice.</li>
+                                <li>Cover with a tight lid and cook on low flame (dum) for 40–45 minutes.</li>
+                                <li>Switch off the flame, let it rest for 10 minutes before opening.</li>
+                                <li>Gently mix and serve hot with raita or mirchi ka salan.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionKarnataka">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionIndianCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Karnataka's Bisi Bele Bath</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C0nAdyXDlnk?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Wash 1 cup rice and ½ cup toor dal, then pressure cook together with 4 cups of water until soft and mushy.</li>
+                        <li>Soak a small lemon-sized tamarind ball in warm water for 10 minutes and extract the pulp.</li>
+                        <li>Chop and boil 1 cup of mixed vegetables like carrots, beans, peas, and capsicum until tender.</li>
+                        <li>In a pan, dry roast chana dal, urad dal, coriander seeds, cumin, dry red chilies, curry leaves, and methi seeds, then grind to a fine powder (Bisi Bele Bath powder).</li>
+                        <li>In a large pot, heat 2 tbsp ghee, add cooked dal–rice mixture, boiled veggies, tamarind pulp, and 2–3 tsp of the spice powder.</li>
+                        <li>Add salt and a small piece of jaggery for balance; adjust water for a slightly runny consistency.</li>
+                        <li>Simmer the mixture on low flame for 8–10 minutes so flavors blend well.</li>
+                        <li>Prepare tempering with ghee, mustard seeds, curry leaves, hing, and cashews, then pour it over the Bisi Bele Bath.</li>
+                        <li>Mix gently and serve hot with papad, boondi, or ghee on top.</li>
+
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Karnataka's Bisi Bele Bath</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C0nAdyXDlnk?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Wash 1 cup rice and ½ cup toor dal, then pressure cook together with 4 cups of water until soft and mushy.</li>
+                                <li>Soak a small lemon-sized tamarind ball in warm water for 10 minutes and extract the pulp.</li>
+                                <li>Chop and boil 1 cup of mixed vegetables like carrots, beans, peas, and capsicum until tender.</li>
+                                <li>In a pan, dry roast chana dal, urad dal, coriander seeds, cumin, dry red chilies, curry leaves, and methi seeds, then grind to a fine powder (Bisi Bele Bath powder).</li>
+                                <li>In a large pot, heat 2 tbsp ghee, add cooked dal–rice mixture, boiled veggies, tamarind pulp, and 2–3 tsp of the spice powder.</li>
+                                <li>Add salt and a small piece of jaggery for balance; adjust water for a slightly runny consistency.</li>
+                                <li>Simmer the mixture on low flame for 8–10 minutes so flavors blend well.</li>
+                                <li>Prepare tempering with ghee, mustard seeds, curry leaves, hing, and cashews, then pour it over the Bisi Bele Bath.</li>
+                                <li>Mix gently and serve hot with papad, boondi, or ghee on top.</li>
+
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionKerala">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionIndianCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Kerala Appam</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/METruOPZ-2Y?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Wash and soak 1 cup raw rice for 4–5 hours, then drain and grind with ¼ cup grated coconut, 2 tbsp cooked rice, and water to make a smooth batter.</li>
+                        <li>Add ½ tsp dry yeast dissolved in 2 tbsp warm water and 1 tsp sugar to the batter.</li>
+                        <li>Mix well and let it ferment overnight or for 8 hours in a warm place.</li>
+                        <li>After fermentation, add salt and a little water to adjust consistency (slightly thinner than dosa batter).</li>
+                        <li>Heat an appam pan or small wok and grease lightly with oil.</li>
+                        <li>Pour a ladle of batter into the center and swirl the pan in a circular motion to spread it thin on the edges and thick in the center.</li>
+                        <li>Cover with a lid and cook on low flame for 2–3 minutes until the edges turn crisp and the center is soft.</li>
+                        <li>Do not flip; remove gently once cooked.</li>
+                        <li>Serve hot with vegetable stew or coconut milk.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Kerala Appam</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/METruOPZ-2Y?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Wash and soak 1 cup raw rice for 4–5 hours, then drain and grind with ¼ cup grated coconut, 2 tbsp cooked rice, and water to make a smooth batter.</li>
+                                <li>Add ½ tsp dry yeast dissolved in 2 tbsp warm water and 1 tsp sugar to the batter.</li>
+                                <li>Mix well and let it ferment overnight or for 8 hours in a warm place.</li>
+                                <li>After fermentation, add salt and a little water to adjust consistency (slightly thinner than dosa batter).</li>
+                                <li>Heat an appam pan or small wok and grease lightly with oil.</li>
+                                <li>Pour a ladle of batter into the center and swirl the pan in a circular motion to spread it thin on the edges and thick in the center.</li>
+                                <li>Cover with a lid and cook on low flame for 2–3 minutes until the edges turn crisp and the center is soft.</li>
+                                <li>Do not flip; remove gently once cooked.</li>
+                                <li>Serve hot with vegetable stew or coconut milk.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionChennai">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionIndianCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Chennai Style Masala Dosa</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mDqkxZ3UVzc?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Soak 2 cups rice and ½ cup urad dal separately for 4–5 hours, then grind them together with a little water into a smooth batter.</li>
+                        <li>Add salt, mix well, and let the batter ferment overnight or for 8–10 hours.</li>
+                        <li>Boil 2–3 potatoes, peel, and mash them for the masala filling.</li>
+                        <li>In a pan, heat 1 tbsp oil, add mustard seeds, curry leaves, chopped onion, green chilies, and turmeric powder.</li>
+                        <li>Add mashed potatoes and salt, mix well, and cook for 2–3 minutes; set aside the masala.</li>
+                        <li>Heat a dosa tawa, pour a ladle of batter, and spread it thin in a circular motion.</li>
+                        <li>Drizzle some oil or ghee around the edges and cook until golden brown.</li>
+                        <li>Place the potato masala in the center, fold the dosa, and cook for a few more seconds.</li>
+                        <li>Serve hot with coconut chutney and sambar.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Chennai Style Masala Dosa</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mDqkxZ3UVzc?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Soak 2 cups rice and ½ cup urad dal separately for 4–5 hours, then grind them together with a little water into a smooth batter.</li>
+                                <li>Add salt, mix well, and let the batter ferment overnight or for 8–10 hours.</li>
+                                <li>Boil 2–3 potatoes, peel, and mash them for the masala filling.</li>
+                                <li>In a pan, heat 1 tbsp oil, add mustard seeds, curry leaves, chopped onion, green chilies, and turmeric powder.</li>
+                                <li>Add mashed potatoes and salt, mix well, and cook for 2–3 minutes; set aside the masala.</li>
+                                <li>Heat a dosa tawa, pour a ladle of batter, and spread it thin in a circular motion.</li>
+                                <li>Drizzle some oil or ghee around the edges and cook until golden brown.</li>
+                                <li>Place the potato masala in the center, fold the dosa, and cook for a few more seconds.</li>
+                                <li>Serve hot with coconut chutney and sambar.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionDelhi">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionIndianCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Delhi's Chole Bhature</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ckTF017vebE?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Soak 1 cup white chickpeas overnight, then pressure cook with salt until soft but not mushy.</li>
+                        <li>Heat 2 tbsp oil in a pan, add chopped onions and ginger-garlic paste, sauté till golden brown.</li>
+                        <li>Add tomato puree, red chili powder, coriander powder, cumin powder, and chole masala; cook till oil separates.</li>
+                        <li>Add boiled chickpeas along with a little of their water, mix well, and simmer for 10–15 minutes.</li>
+                        <li>Add salt and a pinch of garam masala, cook till thick and flavorful.</li>
+                        <li>For Bhature, mix 2 cups maida, 2 tbsp semolina, ½ tsp baking powder, ¼ cup curd, and water to make a soft dough.</li>
+                        <li>Rest the dough for 2–3 hours, then divide into balls and roll into circles.</li>
+                        <li>Deep fry in hot oil until golden and puffed.</li>
+                        <li>Serve hot Chole with Bhature, onion slices, and lemon wedges.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Delhi's Chole Bhature</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ckTF017vebE?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Soak 1 cup white chickpeas overnight, then pressure cook with salt until soft but not mushy.</li>
+                                <li>Heat 2 tbsp oil in a pan, add chopped onions and ginger-garlic paste, sauté till golden brown.</li>
+                                <li>Add tomato puree, red chili powder, coriander powder, cumin powder, and chole masala; cook till oil separates.</li>
+                                <li>Add boiled chickpeas along with a little of their water, mix well, and simmer for 10–15 minutes.</li>
+                                <li>Add salt and a pinch of garam masala, cook till thick and flavorful.</li>
+                                <li>For Bhature, mix 2 cups maida, 2 tbsp semolina, ½ tsp baking powder, ¼ cup curd, and water to make a soft dough.</li>
+                                <li>Rest the dough for 2–3 hours, then divide into balls and roll into circles.</li>
+                                <li>Deep fry in hot oil until golden and puffed.</li>
+                                <li>Serve hot Chole with Bhature, onion slices, and lemon wedges.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionChettinad">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionIndianCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Chettinad Chicken Varuval</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K2miSXNP_nI?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Clean and cut 500g chicken into medium pieces; keep aside.</li>
+                        <li>Dry roast 1 tsp fennel seeds, 1 tsp cumin seeds, 1 tbsp coriander seeds, 6–8 dry red chilies, and few curry leaves; grind them into a coarse powder.</li>
+                        <li>Heat 3 tbsp oil in a pan, add chopped onions and curry leaves, and sauté until golden brown.</li>
+                        <li>Add 1 tbsp ginger-garlic paste and 1 chopped tomato; cook until soft and oil separates.</li>
+                        <li>Add the ground Chettinad masala, ¼ tsp turmeric, and salt; sauté for a minute.</li>
+                        <li>Add chicken pieces and mix well so the masala coats them evenly.</li>
+                        <li>Pour ½ cup water, cover with a lid, and cook on medium flame for 10–15 minutes until chicken turns tender.</li>
+                        <li>Remove the lid and cook on high flame for a few minutes until the gravy thickens and turns dry (varuval style).</li>
+                        <li>Garnish with fresh curry leaves and serve hot with rice, dosa, or parotta.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Chettinad Chicken Varuval</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K2miSXNP_nI?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Clean and cut 500g chicken into medium pieces; keep aside.</li>
+                                <li>Dry roast 1 tsp fennel seeds, 1 tsp cumin seeds, 1 tbsp coriander seeds, 6–8 dry red chilies, and few curry leaves; grind them into a coarse powder.</li>
+                                <li>Heat 3 tbsp oil in a pan, add chopped onions and curry leaves, and sauté until golden brown.</li>
+                                <li>Add 1 tbsp ginger-garlic paste and 1 chopped tomato; cook until soft and oil separates.</li>
+                                <li>Add the ground Chettinad masala, ¼ tsp turmeric, and salt; sauté for a minute.</li>
+                                <li>Add chicken pieces and mix well so the masala coats them evenly.</li>
+                                <li>Pour ½ cup water, cover with a lid, and cook on medium flame for 10–15 minutes until chicken turns tender.</li>
+                                <li>Remove the lid and cook on high flame for a few minutes until the gravy thickens and turns dry (varuval style).</li>
+                                <li>Garnish with fresh curry leaves and serve hot with rice, dosa, or parotta.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionGobi">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionSpecialMixesCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Gobi Manchurian Fried Rice</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OJZ9EMui4qM?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Cut cauliflower (gobi) into small florets, blanch in hot water for 2 minutes, then drain completely.</li>
+                        <li>Make a batter with maida, cornflour, salt, pepper, and a little water; coat the florets and deep fry until golden and crisp.</li>
+                        <li>Heat 2 tbsp oil in a wok, add chopped garlic, onion, capsicum, and spring onions; stir-fry for 2 minutes.</li>
+                        <li>Add 1 tbsp soy sauce, 1 tbsp chili sauce, 1 tbsp tomato ketchup, and ½ tsp vinegar; mix well.</li>
+                        <li>Add cooked and cooled rice to the wok and toss everything together on high flame.</li>
+                        <li>Add salt, pepper, and the fried gobi pieces; mix gently so the florets stay crisp.</li>
+                        <li>Sprinkle spring onion greens and toss one last time.</li>
+                        <li>Serve hot with extra chili sauce or raita on the side.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Gobi Manchurian Fried Rice</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OJZ9EMui4qM?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Cut cauliflower (gobi) into small florets, blanch in hot water for 2 minutes, then drain completely.</li>
+                                <li>Make a batter with maida, cornflour, salt, pepper, and a little water; coat the florets and deep fry until golden and crisp.</li>
+                                <li>Heat 2 tbsp oil in a wok, add chopped garlic, onion, capsicum, and spring onions; stir-fry for 2 minutes.</li>
+                                <li>Add 1 tbsp soy sauce, 1 tbsp chili sauce, 1 tbsp tomato ketchup, and ½ tsp vinegar; mix well.</li>
+                                <li>Add cooked and cooled rice to the wok and toss everything together on high flame.</li>
+                                <li>Add salt, pepper, and the fried gobi pieces; mix gently so the florets stay crisp.</li>
+                                <li>Sprinkle spring onion greens and toss one last time.</li>
+                                <li>Serve hot with extra chili sauce or raita on the side.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionChilli">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionSpecialMixesCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Chilli Paneer Hakka Noodles</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aQHr9Zsnzbw?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Boil 200g Hakka noodles in salted water until just cooked (al dente), then drain and toss with a little oil.</li>
+                        <li>Heat 2 tbsp oil in a wok, add diced paneer cubes, and shallow fry until golden; set aside.</li>
+                        <li>In the same wok, add chopped garlic, spring onions, sliced onions, capsicum, and carrots; sauté on high flame for 2–3 minutes.</li>
+                        <li>Add 1 tbsp soy sauce, 1 tbsp chili sauce, 1 tsp vinegar, and 1 tbsp tomato ketchup; mix well.</li>
+                        <li>Add the fried paneer and boiled noodles to the wok, toss everything together quickly on high heat.</li>
+                        <li>Season with salt, pepper, and a pinch of sugar for balance.</li>
+                        <li>Sprinkle spring onion greens and mix gently.</li>
+                        <li>Serve hot for a perfect Indo-Chinese meal.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Chilli Paneer Hakka Noodles</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aQHr9Zsnzbw?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Boil 200g Hakka noodles in salted water until just cooked (al dente), then drain and toss with a little oil.</li>
+                                <li>Heat 2 tbsp oil in a wok, add diced paneer cubes, and shallow fry until golden; set aside.</li>
+                                <li>In the same wok, add chopped garlic, spring onions, sliced onions, capsicum, and carrots; sauté on high flame for 2–3 minutes.</li>
+                                <li>Add 1 tbsp soy sauce, 1 tbsp chili sauce, 1 tsp vinegar, and 1 tbsp tomato ketchup; mix well.</li>
+                                <li>Add the fried paneer and boiled noodles to the wok, toss everything together quickly on high heat.</li>
+                                <li>Season with salt, pepper, and a pinch of sugar for balance.</li>
+                                <li>Sprinkle spring onion greens and mix gently.</li>
+                                <li>Serve hot for a perfect Indo-Chinese meal.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionSzechuan">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionSpecialMixesCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Szechuan Dosa</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K-y9m2vucZs?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Prepare dosa batter by soaking rice and urad dal, then grind and ferment overnight.</li>
+                        <li>Heat 1 tbsp oil in a pan, add chopped onions, capsicum, cabbage, and carrots; sauté on high flame.</li>
+                        <li>Add 1 tbsp ginger-garlic paste and sauté for a few seconds.</li>
+                        <li>Stir in 2 tbsp Szechuan sauce, 1 tbsp tomato ketchup, salt, and pepper; mix well and cook for a minute.</li>
+                        <li>Heat a dosa tawa, pour a ladle of batter, and spread it thin in a circular motion.</li>
+                        <li>Drizzle a little oil around the edges and cook until the bottom turns golden brown.</li>
+                        <li>Spread a spoon of Szechuan sauce over the dosa and place the prepared veggie mixture in the center.</li>
+                        <li>Fold the dosa and cook for another minute until crisp.</li>
+                        <li>Serve hot with coconut chutney or extra Szechuan sauce.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Szechuan Dosa</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K-y9m2vucZs?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Prepare dosa batter by soaking rice and urad dal, then grind and ferment overnight.</li>
+                                <li>Heat 1 tbsp oil in a pan, add chopped onions, capsicum, cabbage, and carrots; sauté on high flame.</li>
+                                <li>Add 1 tbsp ginger-garlic paste and sauté for a few seconds.</li>
+                                <li>Stir in 2 tbsp Szechuan sauce, 1 tbsp tomato ketchup, salt, and pepper; mix well and cook for a minute.</li>
+                                <li>Heat a dosa tawa, pour a ladle of batter, and spread it thin in a circular motion.</li>
+                                <li>Drizzle a little oil around the edges and cook until the bottom turns golden brown.</li>
+                                <li>Spread a spoon of Szechuan sauce over the dosa and place the prepared veggie mixture in the center.</li>
+                                <li>Fold the dosa and cook for another minute until crisp.</li>
+                                <li>Serve hot with coconut chutney or extra Szechuan sauce.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionChicken">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionSpecialMixesCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Chicken Tikka Tacos</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rhjgkzwVGjY?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Marinate 300g boneless chicken pieces with ½ cup curd, 1 tbsp ginger-garlic paste, 1 tsp red chili powder, ½ tsp turmeric, 1 tsp garam masala, salt, and 1 tbsp lemon juice for at least 1 hour.</li>
+                        <li>Grill or pan-fry the chicken until cooked and slightly charred; set aside.</li>
+                        <li>Warm soft taco shells or small chapatis on a pan.</li>
+                        <li>In a bowl, mix chopped onions, tomatoes, lettuce, and coriander with a squeeze of lemon.</li>
+                        <li>Spread a spoon of mint chutney or mayo on each taco shell.</li>
+                        <li>Add pieces of chicken tikka and top with the prepared salad mix.</li>
+                        <li>Sprinkle chaat masala or shredded cheese if desired.</li>
+                        <li>Fold the taco and serve immediately while warm.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Chicken Tikka Tacos</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rhjgkzwVGjY?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Marinate 300g boneless chicken pieces with ½ cup curd, 1 tbsp ginger-garlic paste, 1 tsp red chili powder, ½ tsp turmeric, 1 tsp garam masala, salt, and 1 tbsp lemon juice for at least 1 hour.</li>
+                                <li>Grill or pan-fry the chicken until cooked and slightly charred; set aside.</li>
+                                <li>Warm soft taco shells or small chapatis on a pan.</li>
+                                <li>In a bowl, mix chopped onions, tomatoes, lettuce, and coriander with a squeeze of lemon.</li>
+                                <li>Spread a spoon of mint chutney or mayo on each taco shell.</li>
+                                <li>Add pieces of chicken tikka and top with the prepared salad mix.</li>
+                                <li>Sprinkle chaat masala or shredded cheese if desired.</li>
+                                <li>Fold the taco and serve immediately while warm.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionPaneer">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionSpecialMixesCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Paneer Bhurji Burritos</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UvTVvMr5WII?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Heat 2 tbsp oil in a pan, add cumin seeds, chopped onions, green chilies, and sauté till golden.</li>
+                        <li>Add chopped tomatoes, red chili powder, turmeric, garam masala, and salt; cook till soft.</li>
+                        <li>Add 200g crumbled paneer and mix well; cook for 3–4 minutes on medium flame.</li>
+                        <li>Warm a tortilla or large roti on a pan.</li>
+                        <li>Place a layer of cooked rice or lettuce leaves on the tortilla (optional for layering).</li>
+                        <li>Add a generous portion of paneer bhurji in the center.</li>
+                        <li>Top with grated cheese or mayo for extra flavor.</li>
+                        <li>Roll tightly into a burrito, grill slightly on both sides for a crispy texture.</li>
+                        <li>Serve hot with tomato ketchup or yogurt dip.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Paneer Bhurji Burritos</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UvTVvMr5WII?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Heat 2 tbsp oil in a pan, add cumin seeds, chopped onions, green chilies, and sauté till golden.</li>
+                                <li>Add chopped tomatoes, red chili powder, turmeric, garam masala, and salt; cook till soft.</li>
+                                <li>Add 200g crumbled paneer and mix well; cook for 3–4 minutes on medium flame.</li>
+                                <li>Warm a tortilla or large roti on a pan.</li>
+                                <li>Place a layer of cooked rice or lettuce leaves on the tortilla (optional for layering).</li>
+                                <li>Add a generous portion of paneer bhurji in the center.</li>
+                                <li>Top with grated cheese or mayo for extra flavor.</li>
+                                <li>Roll tightly into a burrito, grill slightly on both sides for a crispy texture.</li>
+                                <li>Serve hot with tomato ketchup or yogurt dip.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionRajma">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionSpecialMixesCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Rajma Masala Nachos</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pItT8InkYWw?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Soak 1 cup rajma (kidney beans) overnight and pressure cook until soft.</li>
+                        <li>In a pan, heat 1 tbsp oil, add onions, ginger-garlic paste, and sauté till golden brown.</li>
+                        <li>Add tomatoes, chili powder, cumin powder, garam masala, and salt; cook till thick masala forms.</li>
+                        <li>Add boiled rajma and a little water; simmer for 10 minutes until well blended.</li>
+                        <li>Spread nacho chips on a serving plate.</li>
+                        <li>Top with a layer of warm rajma masala.</li>
+                        <li>Sprinkle grated cheese, diced onions, tomatoes, and jalapeños on top.</li>
+                        <li>Drizzle with sour cream, mayo, or green chutney for a desi twist.</li>
+                        <li>Serve immediately while crisp and cheesy.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Rajma Masala Nachos</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pItT8InkYWw?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Soak 1 cup rajma (kidney beans) overnight and pressure cook until soft.</li>
+                                <li>In a pan, heat 1 tbsp oil, add onions, ginger-garlic paste, and sauté till golden brown.</li>
+                                <li>Add tomatoes, chili powder, cumin powder, garam masala, and salt; cook till thick masala forms.</li>
+                                <li>Add boiled rajma and a little water; simmer for 10 minutes until well blended.</li>
+                                <li>Spread nacho chips on a serving plate.</li>
+                                <li>Top with a layer of warm rajma masala.</li>
+                                <li>Sprinkle grated cheese, diced onions, tomatoes, and jalapeños on top.</li>
+                                <li>Drizzle with sour cream, mayo, or green chutney for a desi twist.</li>
+                                <li>Serve immediately while crisp and cheesy.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionTandoori">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionSpecialMixesCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Tandoori Chicken Malai Pizza</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C33v48ZFsbc?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Marinate 300g boneless chicken with ½ cup curd, 1 tbsp ginger-garlic paste, 1 tsp red chili powder, 1 tsp tandoori masala, salt, and 1 tbsp lemon juice; rest for 1 hour.</li>
+                        <li>Grill or pan-fry chicken pieces until cooked and slightly charred; keep aside.</li>
+                        <li>Spread pizza base with white malai sauce (mix of cream, garlic, salt, and pepper) or regular pizza sauce.</li>
+                        <li>Add a layer of mozzarella cheese and place the tandoori chicken pieces on top.</li>
+                        <li>Sprinkle sliced onions, capsicum, and chili flakes.</li>
+                        <li>Bake in a preheated oven at 200°C (392°F) for 10–12 minutes or until the cheese melts.</li>
+                        <li>Brush edges with butter or ghee for a desi touch.</li>
+                        <li>Garnish with coriander or mint leaves and serve hot.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Tandoori Chicken Malai Pizza</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C33v48ZFsbc?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Marinate 300g boneless chicken with ½ cup curd, 1 tbsp ginger-garlic paste, 1 tsp red chili powder, 1 tsp tandoori masala, salt, and 1 tbsp lemon juice; rest for 1 hour.</li>
+                                <li>Grill or pan-fry chicken pieces until cooked and slightly charred; keep aside.</li>
+                                <li>Spread pizza base with white malai sauce (mix of cream, garlic, salt, and pepper) or regular pizza sauce.</li>
+                                <li>Add a layer of mozzarella cheese and place the tandoori chicken pieces on top.</li>
+                                <li>Sprinkle sliced onions, capsicum, and chili flakes.</li>
+                                <li>Bake in a preheated oven at 200°C (392°F) for 10–12 minutes or until the cheese melts.</li>
+                                <li>Brush edges with butter or ghee for a desi touch.</li>
+                                <li>Garnish with coriander or mint leaves and serve hot.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionMasala">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionSpecialMixesCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Masala Mafia Pasta</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/g5ww2ImqSp8?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Boil 2 cups pasta in salted water until soft, then drain and set aside.</li>
+                        <li>Heat 2 tbsp butter in a pan, add chopped garlic, onions, and sauté until golden.</li>
+                        <li>Add 1 chopped tomato, 1 tsp red chili powder, ½ tsp garam masala, and salt; cook until mushy.</li>
+                        <li>Stir in 2 tbsp tomato ketchup and ½ cup cream or milk for a rich base.</li>
+                        <li>Add boiled pasta to the masala mix and toss well.</li>
+                        <li>Sprinkle oregano, chili flakes, and a little grated cheese.</li>
+                        <li>Mix until the sauce coats the pasta evenly.</li>
+                        <li>Garnish with coriander leaves and serve hot.</li>
+                        <li>Optional: Add paneer cubes or veggies for extra flavor.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Masala Mafia Pasta</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/g5ww2ImqSp8?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Boil 2 cups pasta in salted water until soft, then drain and set aside.</li>
+                                <li>Heat 2 tbsp butter in a pan, add chopped garlic, onions, and sauté until golden.</li>
+                                <li>Add 1 chopped tomato, 1 tsp red chili powder, ½ tsp garam masala, and salt; cook until mushy.</li>
+                                <li>Stir in 2 tbsp tomato ketchup and ½ cup cream or milk for a rich base.</li>
+                                <li>Add boiled pasta to the masala mix and toss well.</li>
+                                <li>Sprinkle oregano, chili flakes, and a little grated cheese.</li>
+                                <li>Mix until the sauce coats the pasta evenly.</li>
+                                <li>Garnish with coriander leaves and serve hot.</li>
+                                <li>Optional: Add paneer cubes or veggies for extra flavor.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionGulab">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionSpecialMixesCollection')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Gulab Jamun Cheesecake</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ir6Oi3HLVQc?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Crush 15–20 biscuits (like Marie or Digestive) and mix with 4 tbsp melted butter; press into a cake tin to form the base.</li>
+                        <li>Refrigerate the base for 15–20 minutes to set.</li>
+                        <li>In a bowl, beat 1 cup cream cheese, ½ cup condensed milk, and 1 tsp cardamom powder until smooth.</li>
+                        <li>Add ½ cup whipped cream and gently fold it into the mixture.</li>
+                        <li>Cut small gulab jamuns in halves and arrange them over the biscuit base.</li>
+                        <li>Pour the cheesecake mixture on top and level it evenly.</li>
+                        <li>Refrigerate for 6–8 hours or until firm.</li>
+                        <li>Decorate with more gulab jamuns and saffron strands before serving.</li>
+                        <li>Slice and serve chilled for a perfect fusion dessert.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Gulab Jamun Cheesecake</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ir6Oi3HLVQc?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Crush 15–20 biscuits (like Marie or Digestive) and mix with 4 tbsp melted butter; press into a cake tin to form the base.</li>
+                                <li>Refrigerate the base for 15–20 minutes to set.</li>
+                                <li>In a bowl, beat 1 cup cream cheese, ½ cup condensed milk, and 1 tsp cardamom powder until smooth.</li>
+                                <li>Add ½ cup whipped cream and gently fold it into the mixture.</li>
+                                <li>Cut small gulab jamuns in halves and arrange them over the biscuit base.</li>
+                                <li>Pour the cheesecake mixture on top and level it evenly.</li>
+                                <li>Refrigerate for 6–8 hours or until firm.</li>
+                                <li>Decorate with more gulab jamuns and saffron strands before serving.</li>
+                                <li>Slice and serve chilled for a perfect fusion dessert.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionAmritsar">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionRefreshments')" class="back-btn">Back</button>
+
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+
+                    <p class="recipe-name">Amritsari Sweet Lassi</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WY2W5jU5qPU?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li> Crush the milk peda into a fine powder using a blender or mortar and pestle.</li>
+                        <li>In a large bowl or blender, add the thick curd, crushed peda powder, sugar, and cardamom powder.</li>
+                        <li>Blend or whisk vigorously until smooth and creamy; add cold water or ice cubes to achieve the desired frothy consistency.</li>
+                        <li>Pour into glasses from a height to create froth on top.</li>
+                        <li> Garnish with chopped pistachios if desired and serve chilled immediately.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Amritsari Sweet Lassi</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WY2W5jU5qPU?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li> Crush the milk peda into a fine powder using a blender or mortar and pestle.</li>
+                                <li>In a large bowl or blender, add the thick curd, crushed peda powder, sugar, and cardamom powder.</li>
+                                <li>Blend or whisk vigorously until smooth and creamy; add cold water or ice cubes to achieve the desired frothy consistency.</li>
+                                <li>Pour into glasses from a height to create froth on top.</li>
+                                <li> Garnish with chopped pistachios if desired and serve chilled immediately.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-section text-white">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <img src="https://res.cloudinary.com/dqzxjqirp/image/upload/v1757402488/Untitled_design_1_ymb20p.png" class="food-munch-logo" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 text-center text-md-end">
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <p class="footer-section-mail-id mb-1">orderfood@getrecipes.com</p>
+                        <p class="footer-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-section-address mb-0">&copy; 2025 Get Recipes . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="sectionMumbai">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionRefreshments')" class="back-btn">Back</button>
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                    <p class="recipe-name">Mumbai Cutting Chai</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CVHG9WnI0MA?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Boil water in a pan and add 2 tsp tea leaves.</li>
+                        <li>Add crushed ginger and cardamom pods for flavor.</li>
+                        <li>Let it simmer for 3-4 minutes, then add milk.</li>
+                        <li>Simmer for another 2-3 minutes, stirring occasionally.</li>
+                        <li>Strain into small glasses (cutting) and serve hot.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Mumbai Cutting Chai</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CVHG9WnI0MA?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Boil water in a pan and add 2 tsp tea leaves.</li>
+                                <li>Add crushed ginger and cardamom pods for flavor.</li>
+                                <li>Let it simmer for 3-4 minutes, then add milk.</li>
+                                <li>Simmer for another 2-3 minutes, stirring occasionally.</li>
+                                <li>Strain into small glasses (cutting) and serve hot.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer same as your format -->
+    </div>
+    <div id="sectionGoli">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionRefreshments')" class="back-btn">Back</button>
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                    <p class="recipe-name">Goli Soda</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nDGZGdZNFfE?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Take a chilled Codd-neck bottle.</li>
+                        <li>Add lemon juice or soda flavor as desired.</li>
+                        <li>Push the marble to seal and shake gently.</li>
+                        <li>Open carefully to release the marble and serve.</li>
+                        <li>Optional: Add fresh fruit slices for extra flavor.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Goli Soda</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nDGZGdZNFfE?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Take a chilled Codd-neck bottle.</li>
+                                <li>Add lemon juice or soda flavor as desired.</li>
+                                <li>Push the marble to seal and shake gently.</li>
+                                <li>Open carefully to release the marble and serve.</li>
+                                <li>Optional: Add fresh fruit slices for extra flavor.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionJaljeera">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionRefreshments')" class="back-btn">Back</button>
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                    <p class="recipe-name">Jaljeera</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eDIlsrBUvEU?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Mix 1 tsp roasted cumin powder, 1/2 tsp black salt, 1/4 tsp black pepper in water.</li>
+                        <li>Add tamarind paste or lemon juice for tanginess.</li>
+                        <li>Add mint and coriander leaves, crushed lightly.</li>
+                        <li>Stir well and chill for 30 minutes before serving.</li>
+                        <li>Serve over ice cubes with a sprinkle of chaat masala.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row  align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Jaljeera</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eDIlsrBUvEU?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Mix 1 tsp roasted cumin powder, 1/2 tsp black salt, 1/4 tsp black pepper in water.</li>
+                                <li>Add tamarind paste or lemon juice for tanginess.</li>
+                                <li>Add mint and coriander leaves, crushed lightly.</li>
+                                <li>Stir well and chill for 30 minutes before serving.</li>
+                                <li>Serve over ice cubes with a sprinkle of chaat masala.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionKashmiri">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionRefreshments')" class="back-btn">Back</button>
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                    <p class="recipe-name">Kashmiri Tea (Pink Tea)</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/L1WRNXx437k?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Boil water and add Kashmiri green tea leaves with baking soda.</li>
+                        <li>Simmer and whisk for a few minutes until color changes to pink.</li>
+                        <li>Add milk and sugar, simmer for 2-3 minutes.</li>
+                        <li>Strain into cups and garnish with crushed nuts (almonds/pistachios).</li>
+                        <li>Serve hot for authentic flavor.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Kashmiri Tea (Pink Tea)</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/L1WRNXx437k?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Boil water and add Kashmiri green tea leaves with baking soda.</li>
+                                <li>Simmer and whisk for a few minutes until color changes to pink.</li>
+                                <li>Add milk and sugar, simmer for 2-3 minutes.</li>
+                                <li>Strain into cups and garnish with crushed nuts (almonds/pistachios).</li>
+                                <li>Serve hot for authentic flavor.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionIrani">
+        <div class="main-recipe d-lg-none d-flex flex-column">
+            <div class="main-container-india d-flex flex-column">
+                <div class="Home-Option d-flex flex-row">
+                    <button onclick="display('sectionRefreshments')" class="back-btn">Back</button>
+                    <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                    <p class="recipe-name">Hyderabad Irani Chai</p>
+                </div>
+                <div class="recipe-video-container m-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5Jq9XX5iS2w?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-instructions p-3 step-bg">
+                <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;">
+                    <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                    <ol class="mb-0 ps-3 recipe-steps">
+                        <li>Boil water in a saucepan and add 2 tsp strong black tea leaves.</li>
+                        <li>Add sugar and let it boil for 2-3 minutes.</li>
+                        <li>Add milk and simmer on low heat for 3-4 minutes.</li>
+                        <li>Strain into cups and pour back and forth between two cups for froth.</li>
+                        <li>Serve hot with Osmania biscuits or bun.</li>
+                    </ol>
+                    <ul>
+                        <li class="text-center m-2">Thank You For Watching</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-recipe-large d-none d-lg-block container-fluid py-4">
+            <div class="d-flex flex-row align-items-center px-3 mb-4">
+                <h3 class="home-design" onclick="display('sectionHomePage')">HOME ></h3>
+                <p class="recipe-name mb-0" style="font-size:32px;">Hyderabad Irani Chai</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="recipe-video-container">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5Jq9XX5iS2w?si=acIKMRA0ngLrCq9P" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="steps-instructions h-100">
+                        <div style="background:#F3C623; border-radius:12px; padding:15px; font-family:'Poppins', sans-serif; color:#000;" class="h-100">
+                            <h4 class="mb-3 cooking-instructions">🍲 Cooking Instructions</h4>
+                            <ol class="mb-0 ps-3 recipe-steps">
+                                <li>Boil water in a saucepan and add 2 tsp strong black tea leaves.</li>
+                                <li>Add sugar and let it boil for 2-3 minutes.</li>
+                                <li>Add milk and simmer on low heat for 3-4 minutes.</li>
+                                <li>Strain into cups and pour back and forth between two cups for froth.</li>
+                                <li>Serve hot with Osmania biscuits or bun.</li>
+                            </ol>
+                            <ul>
+                                <li class="text-center m-2" style="list-style-type: none;">Thank You For Watching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>
